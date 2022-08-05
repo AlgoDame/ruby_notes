@@ -26,3 +26,21 @@ As a side note, you don't want to remove any Ruby that comes pre-installed on yo
 `rails destroy controller <ControllerName>`
 OR
 `rails d controller <ControllerName>`
+
+
+# Fix issues with rbenv path in zsh
+- Add ~/.rbenv/bin to your $PATH for access to the rbenv command-line utility.
+```
+ $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+```
+- Add rbenv init to your shell to enable shims and autocompletion.
+```
+$ echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+```
+- Restart your shell so the path changes take effect. You can now begin using rbenv.
+```
+ $ exec $SHELL
+```
+
+#### Useful Link for rbenv issues
+- [Link](https://javierjulio.com/rbenv/)
